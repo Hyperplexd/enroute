@@ -4,8 +4,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 
 class GoogleMapsService {
-  // Replace with your actual Google Maps API key
-  static const String apiKey = 'AIzaSyDz1lX6X6_L-uzPlx17dWfWFIgxZn6BqmY';
+  static const String apiKey = 'GOOGLE_MAPS_API_KEY';
   
   /// Calculate distance and duration between two locations
   Future<Map<String, dynamic>> calculateRoute({

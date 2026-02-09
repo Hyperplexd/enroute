@@ -1,4 +1,4 @@
-# Commute Learning App
+# Enroute
 
 Transform your commute into a learning opportunity with AI-powered personalized podcasts.
 
@@ -140,35 +140,6 @@ Beautiful cards showcasing different learning options with visual badges and ico
 ### Podcast Player
 Full-featured audio player with album art, progress controls, and playback options.
 
-## 🏗️ Project Structure
-
-```
-lib/
-├── main.dart                      # App entry point
-├── theme/
-│   └── app_theme.dart            # Theme configuration
-├── providers/
-│   ├── commute_provider.dart     # Commute state management
-│   ├── learning_provider.dart    # Learning & playback state
-│   └── profile_provider.dart     # User profile & history
-├── screens/
-│   ├── welcome_screen.dart       # Onboarding screen
-│   ├── commute_setup_screen.dart # Route planning screen
-│   ├── learning_path_screen.dart # Learning path selection
-│   ├── podcast_player_screen.dart # Audio player screen
-│   └── profile_screen.dart       # User profile & stats
-├── models/
-│   ├── place.dart                # Location models
-│   ├── podcast.dart              # Podcast models
-│   └── user_preferences.dart     # User settings
-├── widgets/
-│   ├── custom_button.dart        # Reusable buttons
-│   └── loading_dialog.dart       # Loading indicators
-└── services/
-    ├── google_maps_service.dart  # Google Maps integration
-    └── ai_podcast_service.dart   # AI podcast generation
-```
-
 ## 🔧 Configuration
 
 ### Google Maps Setup
@@ -192,33 +163,6 @@ Update `lib/services/ai_podcast_service.dart`:
 ```dart
 static const String apiKey = 'YOUR_AI_API_KEY';
 static const String apiUrl = 'YOUR_AI_API_ENDPOINT';
-```
-
-## 🎨 Design
-
-The app uses a modern dark theme with:
-- **Primary Color**: #13A4EC (Vibrant Blue)
-- **Font**: Lexend (Google Fonts)
-- **Design System**: Material Design 3
-- **UI Framework**: Flutter
-
-Design inspired by modern audio streaming apps with focus on:
-- Clean, minimalist interface
-- Smooth animations and transitions
-- Intuitive navigation
-- Beautiful gradients and shadows
-
-## 🔮 Future Enhancements
-
-- [ ] Offline podcast downloads
-- [ ] Multi-language support
-- [ ] Social sharing and community features
-- [ ] Learning streak tracking
-- [ ] Gamification with achievements
-- [ ] Integration with more learning platforms
-- [ ] Voice control for hands-free operation
-- [ ] Smart notifications for commute reminders
-- [ ] Analytics dashboard for learning progress
 
 ## 📊 Tech Stack
 
@@ -231,36 +175,13 @@ Design inspired by modern audio streaming apps with focus on:
 - **Fonts**: Google Fonts
 - **Storage**: shared_preferences
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 👨‍💻 Author
 
-Your Name
-
-## 🙏 Acknowledgments
-
-- Design inspiration from modern audio streaming platforms
-- Google Maps for location services
-- OpenAI/Anthropic for AI capabilities
-- Flutter community for excellent packages
-
-## 📞 Support
-
-For support, email your-email@example.com or open an issue in the repository.
-
----
+Panos Tsotros
 
 **Made with ❤️ for learners who refuse to waste time**
 
