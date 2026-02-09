@@ -157,13 +157,6 @@ Full-featured audio player with album art, progress controls, and playback optio
 <string>YOUR_API_KEY_HERE</string>
 ```
 
-### AI Integration
-
-Update `lib/services/ai_podcast_service.dart`:
-```dart
-static const String apiKey = 'YOUR_AI_API_KEY';
-static const String apiUrl = 'YOUR_AI_API_ENDPOINT';
-
 ## 📊 Tech Stack
 
 - **Framework**: Flutter
