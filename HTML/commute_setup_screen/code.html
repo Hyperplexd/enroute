@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Commute Setup Screen</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              "surface-dark": "#192b33",
+              "surface-light": "#ffffff",
+              "border-dark": "#325567",
+              "border-light": "#e5e7eb",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"],
+              "body": ["Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        /* Custom scrollbar hiding for horizontal scroll */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between z-10">
+<button class="flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-slate-800 dark:text-white">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h2 class="text-slate-800 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12 font-display">Plan Your Commute</h2>
+</div>
+<!-- Main Content Scroll Area -->
+<div class="flex-1 overflow-y-auto pb-24">
+<!-- Headline -->
+<div class="px-4 pt-4 pb-6">
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight text-left font-display">Where are we going today?</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">We'll tailor the podcast length to your trip.</p>
+</div>
+<!-- Commute Inputs -->
+<div class="px-4">
+<div class="relative bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark p-4">
+<!-- Dotted Connector Line -->
+<div class="absolute left-[34px] top-[46px] bottom-[46px] w-[2px] border-l-2 border-dashed border-slate-300 dark:border-slate-600 z-0"></div>
+<!-- From Input -->
+<div class="relative flex items-center mb-4 z-10">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">my_location</span>
+</div>
+<div class="flex-1 ml-2">
+<label class="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1 ml-1">From</label>
+<input class="w-full bg-slate-50 dark:bg-[#111c22] border border-border-light dark:border-border-dark rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-display text-sm" placeholder="Current Location" type="text" value="Current Location"/>
+</div>
+</div>
+<!-- To Input -->
+<div class="relative flex items-center z-10">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-red-500 text-[24px]">location_on</span>
+</div>
+<div class="flex-1 ml-2">
+<label class="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1 ml-1">To</label>
+<input class="w-full bg-slate-50 dark:bg-[#111c22] border border-border-light dark:border-border-dark rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-display text-sm" placeholder="Enter destination" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Select Chips -->
+<div class="px-4 py-6">
+<p class="text-slate-900 dark:text-white text-sm font-bold mb-3 font-display">Saved Places</p>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
+<button class="flex items-center gap-2 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-full px-4 py-2 shrink-0 hover:border-primary dark:hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary text-[18px]">home</span>
+<span class="text-slate-700 dark:text-slate-200 text-sm font-medium">Home</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-full px-4 py-2 shrink-0 hover:border-primary dark:hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary text-[18px]">work</span>
+<span class="text-slate-700 dark:text-slate-200 text-sm font-medium">Work</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-full px-4 py-2 shrink-0 hover:border-primary dark:hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary text-[18px]">fitness_center</span>
+<span class="text-slate-700 dark:text-slate-200 text-sm font-medium">Gym</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-full px-4 py-2 shrink-0 hover:border-primary dark:hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary text-[18px]">school</span>
+<span class="text-slate-700 dark:text-slate-200 text-sm font-medium">Campus</span>
+</button>
+</div>
+</div>
+<!-- Transport Mode -->
+<div class="px-4 pb-6">
+<h2 class="text-slate-900 dark:text-white text-sm font-bold mb-3 font-display">Transport Mode</h2>
+<div class="flex w-full rounded-xl bg-slate-200 dark:bg-surface-dark p-1 h-12">
+<label class="flex-1 relative cursor-pointer group">
+<input checked="" class="peer sr-only" name="transport" type="radio" value="car"/>
+<div class="absolute inset-0 rounded-lg transition-all peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:shadow-sm"></div>
+<div class="relative z-10 h-full flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 peer-checked:text-primary dark:peer-checked:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+<span class="text-sm font-medium">Car</span>
+</div>
+</label>
+<label class="flex-1 relative cursor-pointer group">
+<input class="peer sr-only" name="transport" type="radio" value="transit"/>
+<div class="absolute inset-0 rounded-lg transition-all peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:shadow-sm"></div>
+<div class="relative z-10 h-full flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 peer-checked:text-primary dark:peer-checked:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">directions_bus</span>
+<span class="text-sm font-medium">Transit</span>
+</div>
+</label>
+<label class="flex-1 relative cursor-pointer group">
+<input class="peer sr-only" name="transport" type="radio" value="walk"/>
+<div class="absolute inset-0 rounded-lg transition-all peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:shadow-sm"></div>
+<div class="relative z-10 h-full flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 peer-checked:text-primary dark:peer-checked:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">directions_walk</span>
+<span class="text-sm font-medium">Walk</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Map Preview (Visual Context) -->
+<div class="px-4 pb-6">
+<div class="w-full h-32 rounded-xl overflow-hidden relative border border-border-light dark:border-border-dark">
+<img alt="Minimal map view of city streets in dark mode style" class="w-full h-full object-cover opacity-80 dark:opacity-60 grayscale hover:grayscale-0 transition-all duration-500" data-alt="Minimal dark map view with street grids" data-location="City Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9J5AU8U0PEY_c4t9RvdJpduaaxPzMf4ajp7QOHg1Sqv8LlONARcfqf-MFQcvRBvpQp4I7YaeiNususvBMl1EhKQHONRrsmhFcBRGXMgS14XCtt8_jBqxc-9J2vsvKVRWfJcQyBb7LztdMN-JMLxVw1zJzo2pnjmwaCc1R2zEgb4K-LsfMqGtCWWs5PYt6KQqZQ9Y4AzjSXswVkMo6oizTC9cV5UdpLcjCKaYnFrzD8psCO1-o9S-Xh6bszZIfyy64AoVOThpZH7A3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light/90 dark:from-background-dark/90 to-transparent flex items-end p-3">
+<p class="text-xs text-slate-600 dark:text-slate-300 font-medium">Visualizing route...</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action Button -->
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pt-8">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold h-14 rounded-xl shadow-lg shadow-primary/25 flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined">schedule</span>
+                Calculate Commute Time
+            </button>
+</div>
+</div>
+</body></html>
